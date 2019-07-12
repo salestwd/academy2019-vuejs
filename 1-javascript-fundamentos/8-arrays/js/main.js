@@ -40,10 +40,21 @@ const alunosSalas = pessoas.map(pessoa => {
   }
 })
 
+alunosSalas.forEach(element => {
+  console.log(element.nome)
+});
+
+
+
+
 // filter
 
 const alunosMaioresDeIdade = pessoas.filter(pessoa => {
-  return pessoa.idade >= 18
+  return pessoa.idade <= 18
+})
+
+alunosMaioresDeIdade.forEach(element =>{
+  console.log(element.nome, element.idade)
 })
 
 // reduce
@@ -51,3 +62,22 @@ const valorInicial = 0
 const somaDosNumeros = numeros.reduce((acumulador, valorAtual) => {
   return acumulador + valorAtual
 }, valorInicial)
+
+console.log(somaDosNumeros)
+
+var rockets = [
+  { country:'Russia', launches:32 },
+  { country:'US', launches:23 },
+  { country:'China', launches:16 },
+  { country:'Europe(ESA)', launches:7 },
+  { country:'India', launches:4 },
+  { country:'Japan', launches:3 }
+];
+
+var sum = rockets.reduce( function( prevVal, elem ) {
+  return prevVal + elem.filter(elem => {
+    return elem.launches > 10
+  });
+}, 0 )
+
+console.log('Soma de foguetes: ', sum)
