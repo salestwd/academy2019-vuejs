@@ -9,6 +9,8 @@
 <body>
     <div id="app">
         <p v-if="seen">Agora você me viu</p>
+        <!-- //pode-se usar o v-show, sem o v-else -->
+        <p v-else>Agora você não me vê</p>
     </div>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="js/main.js"></script>
