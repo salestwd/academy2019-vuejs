@@ -81,3 +81,15 @@ var sum = rockets.reduce( function( prevVal, elem ) {
 }, 0 )
 
 console.log('Soma de foguetes: ', sum)
+
+const debora = pessoas.find(pessoa => pessoa.nome === 'Deborah W. Coulter')
+
+console.log(debora)
+
+// const comeca = pessoas.filter(pessoa => {
+//   return pessoa.nome === 'C'
+// })
+
+// const mediaIdade = pessoas.reduce((acumulador, valorAtual) => {
+//   return (acumulador + valorAtual.idade)*
+// })
